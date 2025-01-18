@@ -9,7 +9,7 @@ export class ColasBullmqController {
 
     @Get('add')
     async addJob() {
-        const fecha=new Date().toString().replace(/T/, ':').replace(/\.\w*/, '');
+        const fecha=new Date().toLocaleString("en-US", {timeZone: process.env.TIMEZONE}).toString().replace(/T/, ':').replace(/\.\w*/, '');
         const job = await this.colasBullmqService.addJob({ id: 1, data: 'data con ñandú desde módulo', fecha: fecha });
         return { message: 'Tarea creada', jobId: job.id, jonName: job.name };
     }
