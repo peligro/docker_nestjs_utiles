@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-//npm install @aws-sdk/client-s3
+
 import { S3Client, PutObjectCommand , DeleteObjectCommand, HeadObjectCommand} from '@aws-sdk/client-s3';
 import { ConfigService } from '@nestjs/config';
 import { extname } from 'path';
