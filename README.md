@@ -4,8 +4,9 @@
 <h2>Docker compose 3.8</h2> 
 <h2>Nestjs</h2>
 <h2>React</h2>
-<h2>Implementación S3 AWS Simple Cloud Storage</h2> 
-
+<h2>Redis</h2>
+<h4>Implementación S3 (AWS Simple Cloud Storage) y Bucket, con IAM (Identity and Access Management)</h4> 
+<h4>Implementación Colas con BullMQ de Nestj y Redis (Redis Commander)</h4> 
 #instalar contenedor<br/>
 <code>docker-compose up --build</code>
 <hr />
