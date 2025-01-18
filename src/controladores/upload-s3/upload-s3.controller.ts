@@ -12,10 +12,20 @@ export class UploadS3Controller {
         const url = await this.ejemploS3Service.uploadFile(file);
         return { estado: "ok", mensaje: "se subió el archivo", url: `https://${this.configService.get<string>('AWS_BUCKET_NAME')}.s3.${this.configService.get<string>('AWS_REGION',)}.amazonaws.com/${url}`, nombre: url, mimetype: file.mimetype }
     }
-
+    /*
     @Delete('/delete')
     async deleteFile(@Query() query) {
         await this.ejemploS3Service.deleteFile(query.file);
         return { estado: "ok", mensaje: `Se elimina el archivo "${query.file}" exitosamente` };
-    }
+    }*/
+        @Delete('/delete')
+        async deleteFile(@Query() query) {
+            try {
+                await this.ejemploS3Service.deleteFile(query.file);
+                return { estado: "ok", mensaje: `Se elimina el archivo "${query.file}" exitosamente` };
+              } catch (error) {
+                return {estado:"error", mensaje: error.message }; // Retorna el mensaje de error
+              }
+            
+        }
 }
