@@ -19,6 +19,9 @@ const Frontend = () => {
                                     <li className="nav-item">
                                         <a className="nav-link" href="/colas-bullmq">Colas Bullmq</a>
                                     </li> 
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="/excel">Excel</a>
+                                    </li> 
                                 </ul>
                             </div>
                         </div>

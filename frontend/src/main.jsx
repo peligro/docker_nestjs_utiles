@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Frontend from './componentes/Frontend';
 import Home  from './paginas/Home'; 
 import ColasBullmq from './paginas/ColasBullmq';
+import ExcelPagina from './paginas/ExcelPagina';
 const router = createBrowserRouter(
   [
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter(
         {
           path:"/colas-bullmq",
           element: <ColasBullmq />
+        },
+        {
+          path:"/excel",
+          element: <ExcelPagina />
         }
       ]
     }

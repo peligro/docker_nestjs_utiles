@@ -10,6 +10,8 @@ import { EjemploS3Service } from './servicios/ejemplo-s3/ejemplo-s3.service';
 import { UploadS3Controller } from './controladores/upload-s3/upload-s3.controller';
 import { ColasBullmqController } from './controladores/colas-bullmq/colas-bullmq.controller';
 import { ColasModuleModule } from './modulos/colas-module.module';
+import { ReportesController } from './controladores/reportes/reportes.controller'; 
+import { ReportesModule } from './modulos/reportes/reportes.module';
 
 @Module({
   imports: [
@@ -18,19 +20,10 @@ import { ColasModuleModule } from './modulos/colas-module.module';
       rootPath: join(__dirname, '..', 'assets'),
     }),
     ColasModuleModule,
-    /*,
-    BullModule.forRoot({
-      connection: {
-        host: 'redis', // Host de Redis (debe coincidir con el Docker Compose)
-        port: 6379,
-      },
-    }),
-    BullModule.registerQueue({
-      name: 'example-queue', // Nombre de la cola
-    }),*/
+    ReportesModule
     
   ],
-  controllers: [AppController, EjemploController, UploadController, UploadS3Controller, ColasBullmqController],
+  controllers: [AppController, EjemploController, UploadController, UploadS3Controller, ColasBullmqController, ReportesController],
   providers: [
     {
       provide: S3Client,
