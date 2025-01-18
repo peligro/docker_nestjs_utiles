@@ -21,6 +21,7 @@ COPY . ./
 
 # Exponer el puerto que usará la aplicación
 EXPOSE 8080
+EXPOSE 5173
 
 # Comando por defecto (mantiene el contenedor corriendo)
 CMD ["tail", "-f", "/dev/null"]
