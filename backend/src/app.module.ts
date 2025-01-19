@@ -38,7 +38,8 @@ import { ReportesModule } from './modulos/reportes/reportes.module';
       },
       inject: [ConfigService],
     },
-    EjemploS3Service 
+    EjemploS3Service
+     
   ],
 })
 export class AppModule {}

@@ -1,6 +1,8 @@
 # Usar una imagen base de Node.js 21
 FROM node:21
 
+ 
+
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
